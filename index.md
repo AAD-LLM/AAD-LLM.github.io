@@ -16,6 +16,46 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 * * *
 
 #### **Clinical Sample 1: Female and Male**
+🎧 **Speech Mixture**: [▶️ Listen](samples/clinical1_mixture.wav)  
+👂 **Attended Speech**: [▶️ Listen](samples/clinical1_attended.wav)  
+
+<style>
+  .model-name {
+    color: grey;
+    font-weight: bold;
+  }
+</style>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answers</th>
+    <th>Question</th>
+    <th>Answers</th>
+  </tr>
+  <tr>
+    <td>blablabla</td>
+    <td rowspan="3">
+      <span class="model-name">SALMONN</span>: <i>"blablabla"</i> <br>
+      <span class="model-name">Qwen2-Audio</span>: <i>"blablabla"</i> <br>
+      <b>AAD-LLM</b>: <i>"blablabla"</i>
+    </td>
+    <td>blablabla</td>
+    <td rowspan="3">
+      <span class="model-name">SALMONN</span>: <i>"blablabla"</i> <br>
+      <span class="model-name">Qwen2-Audio</span>: <i>"blablabla"</i> <br>
+      <b>AAD-LLM</b>: <i>"blablabla"</i>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Oracle Answer</b></td>
+    <td><b>Oracle Answer</b></td>
+  </tr>
+  <tr>
+    <td>blablabla</td>
+    <td>blablabla</td>
+  </tr>
+</table>
 
 #### **Clinical Sample 2: Female and Female**
 
@@ -27,29 +67,19 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 #### **Same-Topic Sample 2**
 
-#### **Same-Topic Sample 3**
-
 * * *
 
 #### **LibriTTS+DNS Sample 1**
 
 #### **LibriTTS+DNS Sample 2**
 
-#### **LibriTTS+DNS Sample 3**
-
 * * *
 
 
 
-#### **Clinical Sample: Failure Case**
+#### **Failure Case 1**
 
-| Speeches     | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
+#### **Failure Case 2**
 
 * * *
 
