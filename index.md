@@ -91,4 +91,4 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 ### Large image
 
-![abstract](https://github.com/AAD-LLM/AAD-LLM.github.io/blob/main/figures/abstract.png)
+![abstract](figures/abstract.png)
