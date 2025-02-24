@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: arxiv
 ---
 
 ![abstract](figures/demo.png)
