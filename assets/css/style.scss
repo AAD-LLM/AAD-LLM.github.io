@@ -1,8 +1,7 @@
----
----
-
 @import 'jekyll-theme-cayman';
 
+@import "{{ site.theme }}";
+
 kbd {
-  background-color: #d9dadb !important;
+  background-color: #e50202 !important;
 }
