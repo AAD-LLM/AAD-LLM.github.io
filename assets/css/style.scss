@@ -1,7 +1,8 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 $header-bg-color: #564444 !default;
 $header-bg-color-secondary: #3e0000 !default;
+
+@import "{{ site.theme }}";
+
