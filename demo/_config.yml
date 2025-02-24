@@ -2,5 +2,6 @@ name: AAD-LLM_review
 title: "AAD-LLM: Neural Attention-Driven Auditory Scene Understanding"
 url: "https://aad-llm.github.io/demo"
 remote_theme: pages-themes/cayman@v0.2.0
+show_downloads: true
 plugins:
 - jekyll-remote-theme
