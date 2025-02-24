@@ -6,31 +6,31 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 * * *
 
-#### Clinical Sample 1: Female and Male
+#### **Clinical Sample 1: Female and Male**
 
-#### Clinical Sample 2: Female and Female
+#### **Clinical Sample 2: Female and Female**
 
-#### Clinical Sample 3: Male and Male
-
-* * *
-
-#### Same-Topic Sample 1
-
-#### Same-Topic Sample 2
-
-#### Same-Topic Sample 3
+#### **Clinical Sample 3: Male and Male**
 
 * * *
 
-#### LibriTTS+DNS Sample 1
+#### **Same-Topic Sample 1**
 
-#### LibriTTS+DNS Sample 2
+#### **Same-Topic Sample 2**
 
-#### LibriTTS+DNS Sample 3
+#### **Same-Topic Sample 3**
 
 * * *
 
-#### Clinical Sample: Failure Case
+#### **LibriTTS+DNS Sample 1**
+
+#### **LibriTTS+DNS Sample 2**
+
+#### **LibriTTS+DNS Sample 3**
+
+* * *
+
+#### **Clinical Sample: Failure Case**
 
 
 
