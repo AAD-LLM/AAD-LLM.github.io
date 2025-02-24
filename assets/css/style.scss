@@ -3,6 +3,5 @@
 
 @import "{{ site.theme }}";
 
-.kbd {
-  background-color: #e50202 !important;
-}
+$header-bg-color: #564444 !default;
+$header-bg-color-secondary: #3e0000 !default;
