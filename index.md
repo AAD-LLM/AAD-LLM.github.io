@@ -33,22 +33,6 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 #### **Clinical Sample: Failure Case**
 
 
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
 #### Header 4
 
 *   This is an unordered list following a header.
@@ -108,18 +92,3 @@ end
 ### Large image
 
 ![abstract](https://github.com/AAD-LLM/AAD-LLM.github.io/blob/main/figures/abstract.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
