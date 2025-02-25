@@ -394,7 +394,7 @@ layout: arxiv
     </audio>
   </div>
   <div>
-    <b>💡 Attended Speech (determined by user-provided speaker label)</b><br>
+    <b>💡 Attended Speech</b> (by user-provided speaker label)<br>
     <audio controls>
       <source src="samples/OL1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
