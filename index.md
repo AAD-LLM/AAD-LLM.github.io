@@ -45,6 +45,8 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 *In the clinical setting, the listener's brain signal is used to decode the attended speaker. We show example responses of AAD-LLM compared with responses of SALMONN and Qwen2-Audio. The **Oracle Answer** is the response of a finetuned Qwen2-Audio trained and evaluated on the oracle (ground-truth attended/unattended) speaker, representing the performance **upper bound**.*
 
+<hr style="height: 3px; background-color: grey; border: none;">
+
 #### **Clinical Sample 1: Female and Male**
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
@@ -232,9 +234,11 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-#### **Same-Topic Sample 1**
-
 *In these same-topic samples, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.*
+
+<hr style="height: 3px; background-color: grey; border: none;">
+
+#### **Same-Topic Sample 1**
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
@@ -382,6 +386,8 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 *AAD-LLM can also run without the brain signal. Users need to provide the speaker vector (label) of the target speaker. We show examples of responses on synthetic LibriTTS + DEMAND speech mixtures with one of the speakers chosen as the target.*
 
+<hr style="height: 3px; background-color: grey; border: none;">
+
 #### **LibriTTS+DEMAND Sample 1**
 
 <div style="display: flex; align-items: center; gap: 20px;">
@@ -444,7 +450,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   </table>
 </div>
 
-#### **LibriTTS+DDEMANDS Sample 2**
+#### **LibriTTS+DEMANDS Sample 2**
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
