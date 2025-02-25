@@ -513,15 +513,86 @@ AAD-LLM can also run without the brain signal. Users need to provide the speaker
   </table>
 </div>
 
-
 <hr style="height: 3px; background-color: grey; border: none;">
-
 
 #### **Failure Case**
 
+<div style="background-color: #FFF2E5; padding: 15px; border-left: 5px solid #FFB899; font-style: italic;">
+AAD-LLM may fail if two speakers are too similar in acoustic, making it hard to decode and select the attended speaker, as shown in the example below.
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/FC1/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b><br>
+    <audio controls>
+      <source src="samples/FC1/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>🔊 Distractor Speech</b><br>
+    <audio controls>
+      <source src="samples/FC1/uatt.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Model Answers 1</th>
+      <th>Question 2</th>
+      <th>Model Answers 2</th>
+      <th>Question 3</th>
+      <th>Model Answers 3</th>
+    </tr>
+    <tr>
+      <td>Transcribe the words of the speaker being listened to.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>It seems like i set the bar too high for myself this week.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>It seems like I said the bar will be there in about forty minutes.</i> <br>
+        <b>AAD-LLM</b>: <i>To the offer, The driver will be there in about forty minutes.</i>
+      </td>
+      <td>What is the attended speech about?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>Setting the bar too high for oneself.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>Someone named Barto coming over in about forty minutes.</i> <br>
+        <b>AAD-LLM</b>: <i>Driver will arrive in forty minutes.</i>
+      </td>
+      <td>Identify the person whom the subject is listening to.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>It is not specified in the given sentence who the subject is listening to.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>Harry.</i> <br>
+        <b>AAD-LLM</b>: <i>A male speaker with low pitch and high tempo.</i>
+        (The description is accurate, but it is true for both speakers.)
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>Seems like I set the bar too high for myself this time.</i></td>
+      <td><i>I’ve set unrealistic expectations for myself.</i></td>
+      <td><i>A male speaker with low pitch and high tempo.</i></td>
+    </tr>
+  </table>
+</div>
 
 
 <hr style="height: 3px; background-color: grey; border: none;">
+
+#### **Disclaimer**
 
 *Within this study, approval of all ethical and experimental procedures and protocols was granted by the university's Institutional Review Board (IRB). The iEEG participants provided informed consent as per the local IRB regulations (IRB protocol number AAAD5482).*
 
