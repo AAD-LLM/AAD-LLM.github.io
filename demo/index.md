@@ -2,7 +2,7 @@
 layout: review
 ---
 
-![abstract](../figures/abstract.png)
+<img src="../figures/abstract.png" style="width: 70%; display: block; margin: auto;">
 
 <span style="color: black;">
 <b>Abstract</b>: Auditory foundation models, including auditory large language models (LLMs), process all sound inputs equally, independent of listener perception. However, human auditory perception is inherently selective: listeners focus on specific speakers while ignoring others in complex auditory scenes. Existing models do not incorporate this selectivity, limiting their ability to generate perception-aligned responses. To address this, we introduce Intention-Informed Auditory Scene Understanding (II-ASU) and present Auditory Attention-Driven LLM (AAD-LLM), a prototype system that integrates brain signals to infer listener attention. AAD-LLM extends an auditory LLM by incorporating intracranial electroencephalography (iEEG) recordings to decode which speaker a listener is attending to and refine responses accordingly. The model first predicts the attended speaker from neural activity, then conditions response generation on this inferred attentional state. We evaluate AAD-LLM on speaker description, speech transcription and extraction, and question answering in multitalker scenarios, with both objective and subjective ratings showing improved alignment with listener intention. By taking a first step toward intention-aware auditory AI, this work explores a new paradigm where listener perception informs machine listening, paving the way for future listener-centered auditory systems.
@@ -48,14 +48,14 @@ In the clinical setting, the listener's brain signal is used to decode the atten
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/CS1/mix.wav" type="audio/wav">
+      <source src="../samples/CS1/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b> (attention decoded from brain)<br>
     <audio controls>
-      <source src="samples/CS1/att.wav" type="audio/wav">
+      <source src="../samples/CS1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -111,14 +111,14 @@ In the clinical setting, the listener's brain signal is used to decode the atten
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/CS2/mix.wav" type="audio/wav">
+      <source src="../samples/CS2/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/CS2/att.wav" type="audio/wav">
+      <source src="../samples/CS2/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -172,14 +172,14 @@ In the clinical setting, the listener's brain signal is used to decode the atten
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/CS3/mix.wav" type="audio/wav">
+      <source src="../samples/CS3/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/CS3/att.wav" type="audio/wav">
+      <source src="../samples/CS3/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -240,21 +240,21 @@ For same-topic samples below, we replaced the background speaker with another sp
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/ST1/mix.wav" type="audio/wav">
+      <source src="../samples/ST1/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/ST1/att.wav" type="audio/wav">
+      <source src="../samples/ST1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>🔊 Distractor Speech</b><br>
     <audio controls>
-      <source src="samples/ST1/uatt.wav" type="audio/wav">
+      <source src="../samples/ST1/uatt.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -288,21 +288,21 @@ For same-topic samples below, we replaced the background speaker with another sp
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/ST2/mix.wav" type="audio/wav">
+      <source src="../samples/ST2/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/ST2/att.wav" type="audio/wav">
+      <source src="../samples/ST2/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>🔊 Distractor Speech</b><br>
     <audio controls>
-      <source src="samples/ST2/uatt.wav" type="audio/wav">
+      <source src="../samples/ST2/uatt.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -336,21 +336,21 @@ For same-topic samples below, we replaced the background speaker with another sp
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/ST3/mix.wav" type="audio/wav">
+      <source src="../samples/ST3/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/ST3/att.wav" type="audio/wav">
+      <source src="../samples/ST3/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>🔊 Distractor Speech</b><br>
     <audio controls>
-      <source src="samples/ST3/uatt.wav" type="audio/wav">
+      <source src="../samples/ST3/uatt.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -390,14 +390,14 @@ AAD-LLM can also run without the brain signal. Users need to provide the speaker
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/OL1/mix.wav" type="audio/wav">
+      <source src="../samples/OL1/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b> (by user-provided speaker label)<br>
     <audio controls>
-      <source src="samples/OL1/att.wav" type="audio/wav">
+      <source src="../samples/OL1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -452,14 +452,14 @@ AAD-LLM can also run without the brain signal. Users need to provide the speaker
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/OL2/mix.wav" type="audio/wav">
+      <source src="../samples/OL2/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/OL2/att.wav" type="audio/wav">
+      <source src="../samples/OL2/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -520,21 +520,21 @@ AAD-LLM may fail if two speakers are too similar in acoustic, making it hard to 
   <div>
     <b>🎧 Speech Mixture</b><br>
     <audio controls>
-      <source src="samples/FC1/mix.wav" type="audio/wav">
+      <source src="../samples/FC1/mix.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>💡 Attended Speech</b><br>
     <audio controls>
-      <source src="samples/FC1/att.wav" type="audio/wav">
+      <source src="../samples/FC1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
   <div>
     <b>🔊 Distractor Speech</b><br>
     <audio controls>
-      <source src="samples/FC1/uatt.wav" type="audio/wav">
+      <source src="../samples/FC1/uatt.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
   </div>
