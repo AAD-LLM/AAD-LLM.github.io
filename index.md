@@ -41,8 +41,9 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   
 </style>
 
+<hr style="height: 3px; background-color: grey; border: none;">
 
-* * *
+*In the clinical setting, the listener's brain signal is used to decode the attended speaker. We show example responses of AAD-LLM compared with responses of SALMONN and Qwen2-Audio. The **Oracle Answer** is the response of a finetuned Qwen2-Audio trained and evaluated on the oracle (ground-truth attended/unattended) speaker, representing the performance **upper bound**.*
 
 #### **Clinical Sample 1: Female and Male**
 <div style="display: flex; align-items: center; gap: 20px;">
@@ -54,7 +55,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     </audio>
   </div>
   <div>
-    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <b>💡 Attended Speech</b> (attention decoded from brain)<br>
     <audio controls>
       <source src="samples/CS1/att.wav" type="audio/wav">
       Your browser does not support the audio element.
@@ -168,8 +169,6 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   </table>
 </div>
 
-
-
 #### **Clinical Sample 3: Male and Male**
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
@@ -231,9 +230,11 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   </table>
 </div>
 
-* * *
+<hr style="height: 3px; background-color: grey; border: none;">
 
 #### **Same-Topic Sample 1**
+
+*In these same-topic samples, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.*
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
@@ -377,22 +378,143 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   </table>
 </div>
 
-* * *
+<hr style="height: 3px; background-color: grey; border: none;">
 
-#### **LibriTTS+DNS Sample 1**
+*AAD-LLM can also run without the brain signal. Users need to provide the speaker vector (label) of the target speaker. We show examples of responses on synthetic LibriTTS + DEMAND speech mixtures with one of the speakers chosen as the target.*
 
-#### **LibriTTS+DNS Sample 2**
+#### **LibriTTS+DEMAND Sample 1**
+
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/OL1/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech (determined by user-provided speaker label)</b><br>
+    <audio controls>
+      <source src="samples/OL1/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Model Answers 1</th>
+      <th>Question 2</th>
+      <th>Model Answers 2</th>
+      <th>Question 3</th>
+      <th>Model Answers 3</th>
+    </tr>
+    <tr>
+      <td>ASR the attended speaker.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>Somewhere however the desire for these changes must arise in the minds of individuals. The old man turned around and around carefully examined and discovered on the napkin a ring several strange red characters.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The old man turned around, examined the ground carefully, and discovered on the napkin several strange red characters.</i> <br>
+        <b>AAD-LLM</b>: <i>Somewhere, however, the desire for these changes must arise in the minds of individuals.</i>
+      </td>
+      <td>ASR the unattended speaker.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>Somewhere however the desire for these changes must arise in the minds of individuals. The old man turned around and around carefully examined and discovered on the napkin a ring several strange red characters.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The old man turned to ground and round carefully examined it discovered on the napkin several strange red characters.</i> <br>
+        <b>AAD-LLM</b>: <i>The old man turned it round and round, carefully examined it, and discovered on the nape of its neck several strange red characters.</i>
+      </td>
+      <td>Describe the attended speaker.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>The attended speaker is describing the examination of changes on the nape of the neck in several strange red characters. Somewhere however the desire for these changes must arise in the minds of individuals.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The speaker is male, speaks English, and conveys a disgusted mood in his speech.</i> <br>
+        <b>AAD-LLM</b>: <i>A male speaker with normal pitch and low tempo.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>Somewhere, however, the desire for these changes must arise in the minds of individuals.</i></td>
+      <td><i>The old man turned it round and round, carefully examined it, and discovered on the nape of its neck several strange red characters.</i></td>
+      <td><i>A male speaker with normal pitch and low tempo.</i></td>
+    </tr>
+  </table>
+</div>
+
+#### **LibriTTS+DDEMANDS Sample 2**
+
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/OL2/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b><br>
+    <audio controls>
+      <source src="samples/OL2/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Model Answers 1</th>
+      <th>Question 2</th>
+      <th>Model Answers 2</th>
+      <th>Question 3</th>
+      <th>Model Answers 3</th>
+    </tr>
+    <tr>
+      <td>What is the main subject of the attended speaker's speech?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>Not specified in the given sentences. I shut the queen up in the bath and tried to suffocate her and the old woman had her own ugly daughter and twilight gathered that the happy family did not know together where she was.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>Not specified in the provided subtitles.</i> <br>
+        <b>AAD-LLM</b>: <i>Old woman hides daughter from king.</i>
+      </td>
+      <td>Can you provide an overview of what the unattended speaker is saying?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>And shut the queen up in the bath and tried to suffocate her father and the guests had their own ugly daughter and twilight gathered that the happy family did not know she was alive. I swear i've been crying but the girls would not leave her so woman with her abandoned daughter in the twilight bathed and came and sat together round the fire.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>A shut up had been placed in front of the bath and tried to suffocate her and the old woman for her own ugly daughter and in the queen's bed that the king might not know she was away.</i> <br>
+        <b>AAD-LLM</b>: <i>Guests left as family gathered by fire.</i>
+      </td>
+      <td>What was the intention of shutting the queen up in the bath?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>The intention was to suffocate the queen and her father.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The intention was to prevent the queen from leaving, as the girls would not let her go without their father.</i> <br>
+        <b>AAD-LLM</b>: <i>The intention was to suffocate her.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>Queen imprisoned, daughter hidden from king.</i></td>
+      <td><i>Guests left early; family gathered by fire.</i></td>
+      <td><i>They tried to suffocate her.</i></td>
+    </tr>
+  </table>
+</div>
 
 
-* * *
+<hr style="height: 3px; background-color: grey; border: none;">
+
+
+#### **Failure Case**
 
 
 
-#### **Failure Case 1**
-
-#### **Failure Case 2**
-
-* * *
+<hr style="height: 3px; background-color: grey; border: none;">
 
 *Within this study, approval of all ethical and experimental procedures and protocols was granted by the university's Institutional Review Board (IRB). The iEEG participants provided informed consent as per the local IRB regulations (IRB protocol number AAAD5482).*
 
