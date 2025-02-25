@@ -44,7 +44,9 @@ layout: arxiv
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-*In the clinical setting, the listener's brain signal is used to decode the attended speaker. We show example responses of AAD-LLM compared with responses of SALMONN and Qwen2-Audio. The **Oracle Answer** is the response of a finetuned Qwen2-Audio trained and evaluated on the oracle (ground-truth attended/unattended) speaker, representing the performance **upper bound**.*
+<div style="background-color: #FFF2E5; padding: 15px; border-left: 5px solid #FFB899; font-style: italic;">
+In the clinical setting, the listener's brain signal is used to decode the attended speaker. We show example responses of AAD-LLM compared with responses of SALMONN and Qwen2-Audio. The <b>Oracle Answer</b> is the response of a finetuned Qwen2-Audio trained and evaluated on the oracle (ground-truth attended/unattended) speaker, representing the performance <b>upper bound</b>.
+</div>
 
 #### **Clinical Sample 1: Female and Male**
 <div style="display: flex; align-items: center; gap: 20px;">
@@ -233,7 +235,9 @@ layout: arxiv
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-*For same-topic samples below, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.*
+<div style="background-color: #FFF2E5; padding: 15px; border-left: 5px solid #FFB899; font-style: italic;">
+For same-topic samples below, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.
+</div>
 
 #### **Same-Topic Sample 1**
 
@@ -381,7 +385,9 @@ layout: arxiv
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-*AAD-LLM can also run without the brain signal. Users need to provide the speaker vector (label) of the target speaker. We show examples of responses on synthetic LibriTTS + DEMAND speech mixtures with one of the speakers chosen as the target.*
+<div style="background-color: #FFF2E5; padding: 15px; border-left: 5px solid #FFB899; font-style: italic;">
+AAD-LLM can also run without the brain signal. Users need to provide the speaker vector (label) of the target speaker. We show examples of responses on synthetic LibriTTS + DEMAND speech mixtures with one of the speakers chosen as the target.
+</div>
 
 #### **LibriTTS+DEMAND Sample 1**
 
