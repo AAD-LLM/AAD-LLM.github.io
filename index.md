@@ -61,11 +61,11 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   <table>
     <tr>
       <th>Question 1</th>
-      <th>Answers 1</th>
+      <th>Model Answers 1</th>
       <th>Question 2</th>
-      <th>Answers 2</th>
+      <th>Model Answers 2</th>
       <th>Question 3</th>
-      <th>Answers 3</th>
+      <th>Model Answers 3</th>
     </tr>
     <tr>
       <td>Who is the speaker that the subject is paying attention to?</td>
@@ -74,7 +74,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
         <span class="model-name">Qwen2-Audio</span>: <i>The specific identity of the speaker is unknown without additional context.</i> <br>
         <b>AAD-LLM</b>: <i>A female speaker with high pitch and normal tempo.</i>
       </td>
-      <td>Write down everything said by the attended speaker.</td>
+      <td>Transcribe the attended speaker.</td>
       <td rowspan="3">
         <span class="model-name">SALMONN</span>: <i>We do offer sessions with our five minute personal trainers.</i> <br>
         <span class="model-name">Qwen2-Audio</span>: <i>um sandwich place with a five minute drive from this area.</i> <br>
@@ -102,8 +102,128 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 
 #### **Clinical Sample 2: Female and Female**
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/CS2/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <audio controls>
+      <source src="samples/CS2/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Model Answers 1</th>
+      <th>Question 2</th>
+      <th>Model Answers 2</th>
+      <th>Question 3</th>
+      <th>Model Answers 3</th>
+    </tr>
+    <tr>
+      <td>Please write down all words spoken by the attended speaker.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>I'm a vintage changer to my second twentieth class cost.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>Mike gave a ginger to me on my twenty-first birthday.</i> <br>
+        <b>AAD-LLM</b>: <i>My uncle gifted Ginger to me on my twentieth birthday.</i>
+      </td>
+      <td>What was the occasion for the gift?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>The occasion for the gift is not mentioned in the given sentence.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The occasion for the gift was Mike's birthday.</i> <br>
+        <b>AAD-LLM</b>: <i>The occasion was my twentieth birthday.</i>
+      </td>
+      <td>Can you identify the person the subject is NOT listening to?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>No, I cannot identify the person the subject is not listening to.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>Mike.</i> <br>
+        <b>AAD-LLM</b>: <i>A female speaker with high pitch and normal tempo.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>My uncle gifted ginger to me on my twentieth birthday.</i></td>
+      <td><i>The gift was given on the speaker's twentieth birthday.</i></td>
+      <td><i>A female speaker with high pitch and normal tempo.</i></td>
+    </tr>
+  </table>
+</div>
+
+
 
 #### **Clinical Sample 3: Male and Male**
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/CS3/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <audio controls>
+      <source src="samples/CS3/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Model Answers 1</th>
+      <th>Question 2</th>
+      <th>Model Answers 2</th>
+      <th>Question 3</th>
+      <th>Model Answers 3</th>
+    </tr>
+    <tr>
+      <td>What is the attended speech about?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>A high school reunion.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The high time to start thinking about having children.</i> <br>
+        <b>AAD-LLM</b>: <i>Time to consider carbon neutrality options.</i>
+      </td>
+      <td>What phrase indicates urgency in the speaker's statement?</td>
+      <td rowspan="3">
+       <span class="model-name">SALMONN</span>: <i>I THINK IT IS HIGH TIME THAT WE START THINKING ABOUT THE NOT TOO DISTANT FUTURE.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The phrase "it is high time that we start thinking about" indicates urgency.</i> <br>
+        <b>AAD-LLM</b>: <i>The phrase "high time" indicates urgency.</i>
+      </td>
+      <td>In the unattended speech, on what floor does the speaker want the room?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>The speaker wants the room on the top floor.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The speaker wants the room on the ground floor.</i> <br>
+        <b>AAD-LLM</b>: <i>The ninth floor.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>Time to consider carbon neutrality now.</i></td>
+      <td><i>The phrase "high time" indicates urgency in the speaker's statement.</i></td>
+      <td><i>The speaker wants the room on the ninth floor.</i></td>
+    </tr>
+  </table>
+</div>
 
 * * *
 
@@ -116,6 +236,8 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 #### **LibriTTS+DNS Sample 1**
 
 #### **LibriTTS+DNS Sample 2**
+
+
 
 * * *
 
