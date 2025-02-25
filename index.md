@@ -21,7 +21,7 @@ layout: arxiv
   table {
     width: max-content;
     border-collapse: collapse;
-    border: 2px solid grey;
+    border: 1px solid grey;
   }
   th, td {
     padding: 10px;
