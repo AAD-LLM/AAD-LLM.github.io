@@ -10,7 +10,7 @@ layout: arxiv
 ![abstract](figures/demo.png)
 
 <span style="color: black;">
-Auditory foundation models, including auditory large language models (LLMs), process all sound inputs equally, independent of listener perception. However, human auditory perception is inherently selective: listeners focus on specific speakers while ignoring others in complex auditory scenes. Existing models do not incorporate this selectivity, limiting their ability to generate perception-aligned responses. To address this, we introduce Intention-Informed Auditory Scene Understanding (II-ASU) and present Auditory Attention-Driven LLM (AAD-LLM), a prototype system that integrates brain signals to infer listener attention. AAD-LLM extends an auditory LLM by incorporating intracranial electroencephalography (iEEG) recordings to decode which speaker a listener is attending to and refine responses accordingly. The model first predicts the attended speaker from neural activity, then conditions response generation on this inferred attentional state. We evaluate AAD-LLM on speaker description, speech transcription and extraction, and question answering in multitalker scenarios, with both objective and subjective ratings showing improved alignment with listener intention. By taking a first step toward intention-aware auditory AI, this work explores a new paradigm where listener perception informs machine listening, paving the way for future listener-centered auditory systems.
+<b>Abstract</b>: Auditory foundation models, including auditory large language models (LLMs), process all sound inputs equally, independent of listener perception. However, human auditory perception is inherently selective: listeners focus on specific speakers while ignoring others in complex auditory scenes. Existing models do not incorporate this selectivity, limiting their ability to generate perception-aligned responses. To address this, we introduce Intention-Informed Auditory Scene Understanding (II-ASU) and present Auditory Attention-Driven LLM (AAD-LLM), a prototype system that integrates brain signals to infer listener attention. AAD-LLM extends an auditory LLM by incorporating intracranial electroencephalography (iEEG) recordings to decode which speaker a listener is attending to and refine responses accordingly. The model first predicts the attended speaker from neural activity, then conditions response generation on this inferred attentional state. We evaluate AAD-LLM on speaker description, speech transcription and extraction, and question answering in multitalker scenarios, with both objective and subjective ratings showing improved alignment with listener intention. By taking a first step toward intention-aware auditory AI, this work explores a new paradigm where listener perception informs machine listening, paving the way for future listener-centered auditory systems.
 </span>
 
 <style>
@@ -45,8 +45,6 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 <hr style="height: 3px; background-color: grey; border: none;">
 
 *In the clinical setting, the listener's brain signal is used to decode the attended speaker. We show example responses of AAD-LLM compared with responses of SALMONN and Qwen2-Audio. The **Oracle Answer** is the response of a finetuned Qwen2-Audio trained and evaluated on the oracle (ground-truth attended/unattended) speaker, representing the performance **upper bound**.*
-
-<hr style="height: 3px; background-color: grey; border: none;">
 
 #### **Clinical Sample 1: Female and Male**
 <div style="display: flex; align-items: center; gap: 20px;">
@@ -235,9 +233,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-*In these same-topic samples, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.*
-
-<hr style="height: 3px; background-color: grey; border: none;">
+*For same-topic samples below, we replaced the background speaker with another speaker talking about the same topic as the foreground speaker. Therefore, selecting the correct speaker is necessary to answer the question correctly.*
 
 #### **Same-Topic Sample 1**
 
@@ -386,8 +382,6 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 <hr style="height: 3px; background-color: grey; border: none;">
 
 *AAD-LLM can also run without the brain signal. Users need to provide the speaker vector (label) of the target speaker. We show examples of responses on synthetic LibriTTS + DEMAND speech mixtures with one of the speakers chosen as the target.*
-
-<hr style="height: 3px; background-color: grey; border: none;">
 
 #### **LibriTTS+DEMAND Sample 1**
 
