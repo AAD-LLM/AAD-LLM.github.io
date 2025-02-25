@@ -16,8 +16,8 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 * * *
 
 #### **Clinical Sample 1: Female and Male**
-🎧 **Speech Mixture**: [▶️ Listen](samples/clinical1_mixture.wav)  
-👂 **Attended Speech**: [▶️ Listen](samples/clinical1_attended.wav)  
+🎧 **Speech Mixture**: [▶️ Listen](samples/CS1/mix.wav)  
+👂 **Attended Speech**: [▶️ Listen](samples/CS1/att.wav) (hidden from models)
 
 <style>
   .model-name {
@@ -34,17 +34,17 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     <th>Answers</th>
   </tr>
   <tr>
-    <td>blablabla</td>
+    <td><i>Who is the speaker that the subject is paying attention to?</i></td>
     <td rowspan="3">
-      <span class="model-name">SALMONN</span>: <i>"blablabla"</i> <br>
-      <span class="model-name">Qwen2-Audio</span>: <i>"blablabla"</i> <br>
-      <b>AAD-LLM</b>: <i>"blablabla"</i>
+      <span class="model-name">SALMONN</span>: <i>The speaker is a woman.</i> <br>
+      <span class="model-name">Qwen2-Audio</span>: <i>The specific identity of the speaker is unknown without additional context.</i> <br>
+      <b>AAD-LLM</b>: <i>A female speaker with high pitch and normal tempo.</i>
     </td>
-    <td>blablabla</td>
+    <td>Write down everything said by the attended speaker.</td>
     <td rowspan="3">
-      <span class="model-name">SALMONN</span>: <i>"blablabla"</i> <br>
-      <span class="model-name">Qwen2-Audio</span>: <i>"blablabla"</i> <br>
-      <b>AAD-LLM</b>: <i>"blablabla"</i>
+      <span class="model-name">SALMONN</span>: <i>We do offer sessions with our five minute personal trainers.</i> <br>
+      <span class="model-name">Qwen2-Audio</span>: <i>um sandwich place with a five minute drive from this area.</i> <br>
+      <b>AAD-LLM</b>: <i>We do offer sessions with our personal trainers.</i>
     </td>
   </tr>
   <tr>
@@ -52,8 +52,8 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     <td><b>Oracle Answer</b></td>
   </tr>
   <tr>
-    <td>blablabla</td>
-    <td>blablabla</td>
+    <td><i>A female speaker with high pitch and normal tempo.</i></td>
+    <td>We do offer sessions with our personal trainers.</td>
   </tr>
 </table>
 
