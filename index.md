@@ -13,7 +13,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 <style>
   table {
-    width: 100%;
+    width: 125%;
     table-layout: fixed;
   }
   th, td {
