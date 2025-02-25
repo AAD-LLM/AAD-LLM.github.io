@@ -515,11 +515,11 @@ AAD-LLM can also run without the brain signal. Users need to provide the speaker
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-#### **Failure Case**
-
 <div style="background-color: #FFF2E5; padding: 15px; border-left: 5px solid #FFB899; font-style: italic;">
 AAD-LLM may fail if two speakers are too similar in acoustic, making it hard to decode and select the attended speaker, as shown in the example below.
 </div>
+
+#### **Failure Case**
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
@@ -592,9 +592,5 @@ AAD-LLM may fail if two speakers are too similar in acoustic, making it hard to 
 
 <hr style="height: 3px; background-color: grey; border: none;">
 
-#### **Disclaimer**
-
-*Within this study, approval of all ethical and experimental procedures and protocols was granted by the university's Institutional Review Board (IRB). The iEEG participants provided informed consent as per the local IRB regulations (IRB protocol number AAAD5482).*
-
-
+<b>Disclaimer</b>: *Within this study, approval of all ethical and experimental procedures and protocols was granted by the university's Institutional Review Board (IRB). The iEEG participants provided informed consent as per the local IRB regulations (IRB protocol number AAAD5482).*
 
