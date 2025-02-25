@@ -11,14 +11,21 @@ layout: arxiv
 
 Auditory foundation models, including auditory large language models (LLMs), process all sound inputs equally, independent of listener perception. However, human auditory perception is inherently selective: listeners focus on specific speakers while ignoring others in complex auditory scenes. Existing models do not incorporate this selectivity, limiting their ability to generate perception-aligned responses. To address this, we introduce Intention-Informed Auditory Scene Understanding (II-ASU) and present Auditory Attention-Driven LLM (AAD-LLM), a prototype system that integrates brain signals to infer listener attention. AAD-LLM extends an auditory LLM by incorporating intracranial electroencephalography (iEEG) recordings to decode which speaker a listener is attending to and refine responses accordingly. The model first predicts the attended speaker from neural activity, then conditions response generation on this inferred attentional state. We evaluate AAD-LLM on speaker description, speech transcription and extraction, and question answering in multitalker scenarios, with both objective and subjective ratings showing improved alignment with listener intention. By taking a first step toward intention-aware auditory AI, this work explores a new paradigm where listener perception informs machine listening, paving the way for future listener-centered auditory systems.
 
+
 <style>
+  .table-container {
+    overflow-x: auto;
+    width: 100%;
+  }
   table {
-    width: 125%;
-    table-layout: fixed;
+    width: max-content;
+    border-collapse: collapse;
   }
   th, td {
     padding: 10px;
+    border: 1px solid black;
     text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 </style>
 
@@ -49,46 +56,50 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   }
 </style>
 
-<table>
-  <tr>
-    <th>Question 1</th>
-    <th>Answers 1</th>
-    <th>Question 2</th>
-    <th>Answers 2</th>
-    <th>Question 3</th>
-    <th>Answers 3</th>
-  </tr>
-  <tr>
-    <td>Who is the speaker that the subject is paying attention to?</td>
-    <td rowspan="3">
-      <span class="model-name">SALMONN</span>: <i>The speaker is a woman.</i> <br>
-      <span class="model-name">Qwen2-Audio</span>: <i>The specific identity of the speaker is unknown without additional context.</i> <br>
-      <b>AAD-LLM</b>: <i>A female speaker with high pitch and normal tempo.</i>
-    </td>
-    <td>Write down everything said by the attended speaker.</td>
-    <td rowspan="3">
-      <span class="model-name">SALMONN</span>: <i>We do offer sessions with our five minute personal trainers.</i> <br>
-      <span class="model-name">Qwen2-Audio</span>: <i>um sandwich place with a five minute drive from this area.</i> <br>
-      <b>AAD-LLM</b>: <i>We do offer sessions with our personal trainers.</i>
-    </td>
-    <td>What is the unattended speaker's speech about?</td>
-    <td rowspan="3">
-      <span class="model-name">SALMONN</span>: <i>Offering sessions with personal personal trainers.</i> <br>
-      <span class="model-name">Qwen2-Audio</span>: <i>The unattended speaker's speech is inaudible...</i> <br>
-      <b>AAD-LLM</b>: <i>Tom's Sandwich Place is five minutes away.</i>
-    </td>
-  </tr>
-  <tr>
-    <td><b>Oracle Answer 1</b></td>
-    <td><b>Oracle Answer 2</b></td>
-    <td><b>Oracle Answer 3</b></td>
-  </tr>
-  <tr>
-    <td><i>A female speaker with high pitch and normal tempo.</i></td>
-    <td><i>We do offer sessions with our personal trainers.</i></td>
-    <td><i>Tom's Sandwich Place is five minutes away.</i></td>
-  </tr>
-</table>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question 1</th>
+      <th>Answers 1</th>
+      <th>Question 2</th>
+      <th>Answers 2</th>
+      <th>Question 3</th>
+      <th>Answers 3</th>
+    </tr>
+    <tr>
+      <td>Who is the speaker that the subject is paying attention to?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>The speaker is a woman.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The specific identity of the speaker is unknown without additional context.</i> <br>
+        <b>AAD-LLM</b>: <i>A female speaker with high pitch and normal tempo.</i>
+      </td>
+      <td>Write down everything said by the attended speaker.</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>We do offer sessions with our five minute personal trainers.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>um sandwich place with a five minute drive from this area.</i> <br>
+        <b>AAD-LLM</b>: <i>We do offer sessions with our personal trainers.</i>
+      </td>
+      <td>What is the unattended speaker's speech about?</td>
+      <td rowspan="3">
+        <span class="model-name">SALMONN</span>: <i>Offering sessions with personal personal trainers.</i> <br>
+        <span class="model-name">Qwen2-Audio</span>: <i>The unattended speaker's speech is inaudible...</i> <br>
+        <b>AAD-LLM</b>: <i>Tom's Sandwich Place is five minutes away.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer 1</b></td>
+      <td><b>Oracle Answer 2</b></td>
+      <td><b>Oracle Answer 3</b></td>
+    </tr>
+    <tr>
+      <td><i>A female speaker with high pitch and normal tempo.</i></td>
+      <td><i>We do offer sessions with our personal trainers.</i></td>
+      <td><i>Tom's Sandwich Place is five minutes away.</i></td>
+    </tr>
+  </table>
+</div>
+
 
 #### **Clinical Sample 2: Female and Female**
 
