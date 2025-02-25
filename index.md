@@ -42,13 +42,15 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 <table>
   <tr>
-    <th>Question</th>
-    <th>Answers</th>
-    <th>Question</th>
-    <th>Answers</th>
+    <th>Question 1</th>
+    <th>Answers 1</th>
+    <th>Question 2</th>
+    <th>Answers 2</th>
+    <th>Question 3</th>
+    <th>Answers 3</th>
   </tr>
   <tr>
-    <td><i>Who is the speaker that the subject is paying attention to?</i></td>
+    <td>Who is the speaker that the subject is paying attention to?</td>
     <td rowspan="3">
       <span class="model-name">SALMONN</span>: <i>The speaker is a woman.</i> <br>
       <span class="model-name">Qwen2-Audio</span>: <i>The specific identity of the speaker is unknown without additional context.</i> <br>
@@ -60,14 +62,22 @@ Auditory foundation models, including auditory large language models (LLMs), pro
       <span class="model-name">Qwen2-Audio</span>: <i>um sandwich place with a five minute drive from this area.</i> <br>
       <b>AAD-LLM</b>: <i>We do offer sessions with our personal trainers.</i>
     </td>
+    <td>What is the unattended speaker's speech about?</td>
+    <td rowspan="3">
+      <span class="model-name">SALMONN</span>: <i>Offering sessions with personal personal trainers.</i> <br>
+      <span class="model-name">Qwen2-Audio</span>: <i>The unattended speaker's speech is inaudible...</i> <br>
+      <b>AAD-LLM</b>: <i>Tom's Sandwich Place is five minutes away.</i>
+    </td>
   </tr>
   <tr>
-    <td><b>Oracle Answer</b></td>
-    <td><b>Oracle Answer</b></td>
+    <td><b>Oracle Answer 1</b></td>
+    <td><b>Oracle Answer 2</b></td>
+    <td><b>Oracle Answer 3</b></td>
   </tr>
   <tr>
     <td><i>A female speaker with high pitch and normal tempo.</i></td>
-    <td>We do offer sessions with our personal trainers.</td>
+    <td><i>We do offer sessions with our personal trainers.</i></td>
+    <td><i>Tom's Sandwich Place is five minutes away.</i></td>
   </tr>
 </table>
 
