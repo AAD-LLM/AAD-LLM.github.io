@@ -16,8 +16,22 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 * * *
 
 #### **Clinical Sample 1: Female and Male**
-🎧 **Speech Mixture**: [▶️ Listen](samples/CS1/mix.wav)  
-👂 **Attended Speech**: [▶️ Listen](samples/CS1/att.wav) (hidden from models)
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/CS1/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <audio controls>
+      <source src="samples/CS1/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
 
 <style>
   .model-name {
