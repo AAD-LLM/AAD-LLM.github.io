@@ -29,6 +29,19 @@ Auditory foundation models, including auditory large language models (LLMs), pro
   }
 </style>
 
+<style>
+  .model-name {
+    color: grey;
+    font-weight: bold;
+  }
+
+  .model-name b {
+    color: black;
+  }
+  
+</style>
+
+
 * * *
 
 #### **Clinical Sample 1: Female and Male**
@@ -48,13 +61,6 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     </audio>
   </div>
 </div>
-
-<style>
-  .model-name {
-    color: grey;
-    font-weight: bold;
-  }
-</style>
 
 
 <div class="table-container">
@@ -111,7 +117,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     </audio>
   </div>
   <div>
-    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <b>💡 Attended Speech</b><br>
     <audio controls>
       <source src="samples/CS2/att.wav" type="audio/wav">
       Your browser does not support the audio element.
@@ -174,7 +180,7 @@ Auditory foundation models, including auditory large language models (LLMs), pro
     </audio>
   </div>
   <div>
-    <b>💡 Attended Speech</b> (hidden from models)<br>
+    <b>💡 Attended Speech</b><br>
     <audio controls>
       <source src="samples/CS3/att.wav" type="audio/wav">
       Your browser does not support the audio element.
@@ -229,14 +235,153 @@ Auditory foundation models, including auditory large language models (LLMs), pro
 
 #### **Same-Topic Sample 1**
 
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/ST1/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b><br>
+    <audio controls>
+      <source src="samples/ST1/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>🔊 Distractor Speech</b><br>
+    <audio controls>
+      <source src="samples/ST1/uatt.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Model Answers</th>
+    </tr>
+    <tr>
+      <td>Listen to the attended talker: what is the address mentioned?</td>
+      <td rowspan="3">
+        <span class="model-name">Qwen2-Audio</span>: <i>The address mentioned is 378456 apartments north avenue.</i> <br>
+        <b>AAD-LLM</b>: <i>Three Seven Eight three seven eight South Street, Apartment C.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer</b></td>
+    </tr>
+    <tr>
+      <td><i>The address is three seven eight, three seven eight South Street, Apartment C.</i></td>
+    </tr>
+  </table>
+</div>
+
 #### **Same-Topic Sample 2**
+
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/ST2/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b><br>
+    <audio controls>
+      <source src="samples/ST2/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>🔊 Distractor Speech</b><br>
+    <audio controls>
+      <source src="samples/ST2/uatt.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Model Answers</th>
+    </tr>
+    <tr>
+      <td>Listen to the attended talker: how often does the speaker go hiking?</td>
+      <td rowspan="3">
+        <span class="model-name">Qwen2-Audio</span>: <i>The speaker goes hiking rarely.</i> <br>
+        <b>AAD-LLM</b>: <i>The speaker goes hiking very often.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer</b></td>
+    </tr>
+    <tr>
+      <td><i>The speaker goes hiking very often.</i></td>
+    </tr>
+  </table>
+</div>
+
+#### **Same-Topic Sample 3**
+
+<div style="display: flex; align-items: center; gap: 20px;">
+  <div>
+    <b>🎧 Speech Mixture</b><br>
+    <audio controls>
+      <source src="samples/ST3/mix.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>💡 Attended Speech</b><br>
+    <audio controls>
+      <source src="samples/ST3/att.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div>
+    <b>🔊 Distractor Speech</b><br>
+    <audio controls>
+      <source src="samples/ST3/uatt.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</div>
+
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Model Answers</th>
+    </tr>
+    <tr>
+      <td>Listen to the attended talker: what does the speaker imply about the progress toward space travel?</td>
+      <td rowspan="3">
+        <span class="model-name">Qwen2-Audio</span>: <i>The speaker implies that space travel remains a distant dream despite recent advancements in private space companies.</i> <br>
+        <b>AAD-LLM</b>: <i>The speaker implies that there has been significant progress made by private companies in making space travel more feasible.</i>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Oracle Answer</b></td>
+    </tr>
+    <tr>
+      <td><i>The speaker implies that there is significant progress being made in achieving their dreams of floating in space.</i></td>
+    </tr>
+  </table>
+</div>
 
 * * *
 
 #### **LibriTTS+DNS Sample 1**
 
 #### **LibriTTS+DNS Sample 2**
-
 
 
 * * *
