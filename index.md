@@ -520,7 +520,7 @@ AAD-LLM can also run without the brain signal. Users need to provide the speaker
 AAD-LLM may fail if two speakers are too similar in acoustic, making it hard to decode and select the attended speaker, as shown in the example below.
 </div>
 
-#### **Failure Case**
+#### **Failure Sample**
 
 <div style="display: flex; align-items: center; gap: 20px;">
   <div>
