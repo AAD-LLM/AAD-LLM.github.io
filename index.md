@@ -2,7 +2,7 @@
 layout: arxiv
 ---
 
-***Xilin Jiang<sup>1★</sup>, Sukru Samet Dindar<sup>1★</sup>, Vishal Choudhari<sup>1★</sup>, Stephan Bickel<sup>3,4</sup>, Ashesh Mehta<sup>3,4</sup>, Guy M McKhann<sup>1</sup>, Adeen Flinker<sup>2</sup>, Daniel Friedman<sup>2</sup>, Nima Mesgarani<sup>1★</sup>***
+***Xilin Jiang<sup>1★</sup>, Sukru Samet Dindar<sup>1★</sup>, Vishal Choudhari<sup>1★</sup>, Stephan Bickel<sup>3,4</sup>, Ashesh Mehta<sup>3,4</sup>, Guy M McKhann<sup>1</sup>, Daniel Friedman<sup>2</sup>, Adeen Flinker<sup>2</sup>, Nima Mesgarani<sup>1★</sup>***
 
 
 <sub>*First two authors conntribute equally.*</sub>
